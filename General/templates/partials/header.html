@@ -1,0 +1,56 @@
+{% load static %}
+
+<!--Aqui empieza el Header-->
+<!--header-->
+<header class="fixed-top ">
+ 
+   <!-- Inicio container Menú header-->
+  <nav id="barra"  class="navbar navbar-expand">  
+    <div class="container-fluid">
+      <img id="img-logo" src="{% static 'img/clinica1.JPG' %}" alt="logo" class="m-lg-5">
+      <a class="navbar-white m-3" id="navbar-"> "Tu salud, nuestro compromiso"</a>
+
+      <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding-left: 210px">
+
+          <li class="btn btn-outline-info m-3" style="font-size: 10pt; font-family:arial;">
+            <a style="color: white; padding-top: 15px;"
+              href="{% url 'inicio' %}">INICIO</a>
+          </li>                     
+            <li class="btn btn-outline-danger m-3" style="font-size: 10pt; font-family: arial;">
+              <a style="color: white; padding-top: 15px;"
+                href="{% url 'servicios' %}">NOSOTROS</a>
+            </li>
+            <li class="btn btn-outline-warning m-3" style="font-size: 10pt; font-family: arial;">
+              <a style="color: white; padding-top: 15px;"
+                href="{% url 'politica' %}">POLITICA</a>                
+            </li>
+            <div class="dropdown">
+              <button class="btn btn-outline-primary m-3 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                DE INTERÉS
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'certificacion' %}">Certificación estados financieros</a></li>
+                <li><a class="dropdown-item" href="{% url 'notas' %}">Notas estados financieros</a></li>                
+              </ul>
+            </div>
+            <li class="btn btn-outline-success m-3" style="font-size: 10pt; font-family:arial;">
+              <a style="color: white; padding-top: 15px;"
+                href='{% url "sedes" %}'>UBICACIÓN</a>
+            </li> 
+          </ul>
+      </div>
+    </div>
+  </nav>
+  </div>
+  <!-- Fin container Menú header-->
+
+</header>
+
+
+
+<!--Aqui termia el Header-->

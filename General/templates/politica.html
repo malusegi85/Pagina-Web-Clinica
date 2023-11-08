@@ -1,0 +1,77 @@
+{% extends "partials/body.html" %}
+{% load static %}
+
+
+{% block contenido %}
+    
+                           
+            <div class="container-fluid marke">     
+              
+          
+              <div class="row featurette pt-4 p-5">
+                <div class="col-md-5 order-md-2 p-5">
+                  <h2 class="featurette-heading fw-normal lh-1 bg-gradient-lightblue">Política de Calidad</span></h2>
+                  <p class="lead ">                    
+                      La alta dirección de IPS LA DORADA S.A.S. se compromete a través del direccionamiento estratégico a garantizar el cumplimiento de los requisitos legales y reglamentarios, así como la asignación de los recursos para ampliar sus servicios y adquirir insumos médicos para prestar atención de alta calidad. Así mismo se centrará en el bienestar de sus pacientes y colaboradores para brindar atención con los más altos estándares de calidad.
+                  </p>                 
+                </div>
+                <div class="col-md-7 order-md-1 p-5">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner h-100">
+                            <div class="carousel-item active">
+                                <img src="{% static 'img/politica4.JPG' %}" class="w-100 h-100" alt="...">
+                            </div>
+                            <div class="carousel-item h-100">
+                                <img src="{% static 'img/politica3.JPG' %}" class="w-100 h-100" alt="...">
+                            </div>
+                            <div class="carousel-item h-100">
+                                <img src="{% static 'img/politica1.JPG' %}" class="w-100 h-100" alt="...">
+                            </div>
+                        </div>
+                    
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+              </div>               
+            
+              <div class="row featurette py-5 p-5 m-5">
+                <div class="col-md-5 text-center">
+                    <h2 class="featurette-heading fw-normal lh-1 bg-gradient-lightblue">Sobre las imágenes</span></h2>
+                  
+                  <p class="lead">
+                    Imágenes Tomadas Del Banco De Imágenes Libres De Derecho De Autor.
+                  </p>
+                  <p class="lead">
+                    Referencias:
+                  </p>
+                  <p class="lead">
+                    https://www.freepik.es/
+                  </p>
+                  <p class="lead">
+                    https://pixabay.com/es/
+                  </p>
+                  <p class="lead">
+                    https://stock.adobe.com/co/
+                  </p>
+                 
+                </div>
+                <div class="col-md-7">
+                  <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img" width="120" height="130"  ><img src="{% static 'img/politica3.JPG' %}" class="h-100 w-75" alt="..."></svg>
+                  
+                </div>
+              </div>     
+             
+          
+            </div><!-- /.container -->         
+        
+    </section>
+{% endblock contenido %}
+    

@@ -1,0 +1,198 @@
+{% extends "partials/body.html" %}
+{% load static %}
+{% block contenido %}
+<!--Aqui empieza el main-->
+<main >
+  <!--Hora reloj digital-->
+  <div class="text-center m-lg-4" style="color: #008">
+    <script type="text/javascript">
+        function startTime(){
+        today=new Date();
+        h=today.getHours();
+        m=today.getMinutes();
+        s=today.getSeconds();
+        m=checkTime(m);
+        s=checkTime(s);
+        document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+        t=setTimeout('startTime()',500);}
+        function checkTime(i)
+        {if (i<10) {i="0" + i;}return i;}
+        window.onload=function(){startTime();}
+        </script>
+        <div id="reloj" style="font-size:40px;"></div> 
+        
+        <!--Fecha calendario-->
+        <script type="text/javascript">
+            //<![CDATA[
+            function makeArray() {
+            for (i = 0; i<makeArray.arguments.length; i++)
+            this[i + 1] = makeArray.arguments[i];}
+            var months = new makeArray('Enero','Febrero','Marzo','Abril','Mayo',
+            'Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
+            var d=new Date();
+            var dia=new Array(7);
+            dia[0]="Domingo";
+            dia[1]="Lunes";
+            dia[2]="Martes";
+            dia[3]="Miércoles";
+            dia[4]="Jueves";
+            dia[5]="Viernes";
+            dia[6]="Sábado";
+            document.write("Hoy es: " + dia[d.getDay()]);
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth() + 1;
+            var yy = date.getYear();
+            var year = (yy < 1000) ? yy + 1900 : yy;
+            document.write(", " + day + " de " + months[month] + " del " + year);
+            //]]>
+            </script>   
+  <!--Inicio del carousel principal-->
+        <div id="carouselExampleDark" class="carousel carousel-dark slidep-5 m-5" data-bs-ride="carousel"  >
+          <div class="carousel-indicators mx-auto">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img src="{% static 'img/carrusel1.JPG' %}" class="d-block w-90" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="{% static 'img/carrusel2.JPG' %}" class="d-block w-90" alt="...">
+              <div class="carousel-caption d-none d-md-block">                
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'img/carrusel3.JPG' %}" class="d-block w-90" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+  <!--Fin del carousel principal-->
+
+   <!--card-->
+        <div class="container border-top p-4 pt-4" id="mb-3"></div>
+        <div class="  m-4 ">
+          <div class=" row g-0">
+            <div class="col-md-6">
+              <img src="{% static 'img/estrategico1.JPG' %}" class="img-fluid rounded-start w-100" alt="índice">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body text-center ">
+                <h2 class="card-title pt-3  bg-gradient-info">DIRECCIONAMIENTO ESTRATEGICO</h2>
+                <p class="card-text pt-2"id="card-text">
+                  Define la ruta para el logro de las metas y objetivos, a través de la planeación y ejecución desde el punto de partida en la misión hasta el cumplimiento de la visión estipulada. A continuación, se definen los componentes que hacen parte del direccionamiento estratégico que debe estar consagrado en todo plan o proyecto a nivel organizacional:
+                  Para la Clínica La Dorada, la misión expresa el que hacer institucional en el sentido de los bienes o servicios que entrega a sus usuarios y de la calidad con que los suministra. 
+                </p>
+                <p class="card-text pt-3  bg-gradient-secondary">Clínica la Dorada IPS S.A.S</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  <!--card-->
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+    <div class="d-flex flex-column align-items-start gap-2">
+      <h3 class="fw-bold bg-gradient-info">La formulación de la misión,<br>se desarrolló con la participación de los accionistas.</h3>
+      <p class="text-muted">Se elaboró en un lenguaje de fácil comprensión por las partes interesadas.</p>
+     
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 g-4">
+      
+      <div class="d-flex flex-column gap-2">
+        <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#table"></use>
+          </svg>
+        </div>
+        <h4 class="fw-semibold mb-0"><img src="{% static 'icons\hot-pool.png' %}" alt="login-icon" style="height: 2rem" />Misión</h4>
+        <p class="text-muted">Nuestra IPS es una organización que presta servicios de primer nivel, alta calidad y de manera integral, en el departamento sur colombiano, además cuenta con personal capacitado, trato humanizado, receptivo, respetuosa, responsable y muy comprometido con la salud del ser humano,</p>
+      </div>
+      <div class="d-flex flex-column gap-2">
+        <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#collection"></use>
+          </svg>
+        </div>
+        
+        <h4 class="fw-semibold mb-0"><img src="{% static 'icons\hot-pool.png' %}" alt="login-icon" style="height: 2rem" /></h4>
+        <p class="text-muted">de igual manera brinda atención oportuna, para prevenir el desarrollo de las diferentes enfermedades que pueden deteriorar la salud de la persona con el transcurrir del tiempo, generando afecciones en su salud física y sus demás componentes.
+
+        </p>
+      </div>
+
+      <div class="d-flex flex-column gap-2">
+        <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#gear-fill"></use>
+          </svg>
+        </div>
+        <h4 class="fw-semibold mb-0"><img src="{% static 'icons\dumbbell.png' %}" alt="login-icon" style="height: 2rem" />Visión</h4>
+        <p class="text-muted">Para el 2027 IPS La Dorada S.A.S será una organización con amplios servicios en salud, así mismo será destacada por el aporte tecnológico y social en el departamento del Putumayo. </p>
+      </div>
+
+      <div class="d-flex flex-column gap-2">
+        <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#speedometer"></use>
+          </svg>
+        </div>
+        <h4 class="fw-semibold mb-0"><img src="{% static 'icons\dumbbell.png' %}" alt="login-icon" style="height: 2rem" /></h4>
+        <p class="text-muted">Además, será reconocida por su atención oportuna, humanizada, responsable y comprometida con la salud física y psicológica de sus habitantes y colaboradores.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+   
+  <!--container info puntual-->
+        <div class="container  ">
+          <div class="row pt-5">
+            <div class="col text-center bg-gradient-info p-5"id="col">
+              DEPARTAMENTO DEL PUTUMAYO
+             <P>
+                MUNICIPIO DE SAN MIGUEL
+             </P>
+            </div>
+            <div class="col text-center bg-gradient-info p-5" id="col" >
+              CLINICA
+              <P>
+                LA DORADA IPS SAS
+              </P>
+          </div>
+        </div>
+  
+  <!--Google map-->
+        <div class="row g-0 bg-light position-relative  " >
+          <div class="col-md-6 mb-md-2  p-md-3">
+            <div class="container " >
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31918.01708566424!2d-76.91240888916009!3d0.33002000000000764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e284101bd69a771%3A0xbb6cb2c40593e50e!2sE.S.E%20Hospital%20Fronterizo%20La%20Dorada!5e0!3m2!1ses-419!2sco!4v1682875037848!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>>
+            </div>
+          </div>
+          <div class="col-md-6 p-5" id="col-md-2">
+            <h5 class="mt-2 m-lg-2 p-2 m-1 bg-gradient-danger text-center">Ubicación</h5>
+            <br>
+            <p style="text-align:left;" class="m-lg-2 p-3">San Miguel es un Municipio Colombiano, situado al suroccidente del Departamento del Putumayo, limita al sur con la Republica de Ecuador. Su cabecera municipal es La Dorada. Por el norte y oeste limita con Valle del Guamuez y al este con Puerto Asís. El municipio fue creado en 1994.</p>
+            <p style="text-align:left;" class="m-lg-2 p-3">El municipio de San Miguel, se encuentra localizado en la margen izquierda del río de su mismo nombre, ubicándose en el extremo sur occidental del departamento Putumayo y comparte la frontera con la hermana república de Ecuador. Fue constituido como municipio mediante ordenanza 045 el 29 de abril de 1994, e inició su vida como ente territorial el 1 de julio de ese mismo año en la cabecera municipal de La Dorada.</p>
+            <br></div>
+        </div>
+        <p></p>
+  <!--Google Maps-->
+</main>
+<!--Aqui termina el main-->
+{% endblock contenido %}

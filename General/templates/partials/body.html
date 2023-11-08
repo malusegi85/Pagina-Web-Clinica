@@ -1,0 +1,45 @@
+{#Cargar la libreria de bootstrap5 #}
+{% load static %}
+{% load bootstrap5 %}
+{#Cargar el css y el js de bootstrap5 #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{#Cargar mesajes bootstrap5 #}
+{% bootstrap_messages %}
+
+<!DOCTYPE html>
+<html lang="es ">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        
+
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="{% static 'fontawesome-free/css/all.min.css' %}">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{% static 'css/adminlte.min.css' %}">
+        <!-- Toastr -->
+        <link rel="stylesheet" href="{% static 'toastr/toastr.min.css' %}">
+        <link rel="shortcut icon" href="{% static 'img/SenaLogo.png' %}">
+        <title>Clinica la Dorada IPS{{titulo}}</title>
+
+    </head>
+        <body>
+            {% include "partials/header.html" %}
+
+            <div class=" pt-5">
+            {% block contenido %}
+            
+            {% endblock contenido %}
+            </div>
+            
+            {% include "partials/footer.html" %}
+        </body>
+</html>

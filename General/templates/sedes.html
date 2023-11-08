@@ -1,0 +1,97 @@
+{% extends 'partials/body.html' %}
+{% load static %}
+{% block contenido %}
+
+<main>
+  <section class="pt-3 text-center">
+    <div class="text-lg-right">
+      <img src="{% static 'img/miguel1.JPG' %}">
+    </div>   
+        <h1 class="fw-light">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Nuestra IPS se encuentra ubicada en;</font>
+          </font>
+        </h1>
+        <p class="lead text-muted">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">El Municipio de San Miguel - Putumayo.</font>
+          </font>
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <h1 class="text-center pb-3">Acerca del municipio</h1>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col"><h3 class="text-center">Composición</h3>
+          <div class="card shadow-sm">
+            <img src="{% static 'img/miguel2.JPG' %}">
+            <div class="card-body">
+              <p class="card-text">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">El municipio de San Miguel está compuesto por (54) veredas: 
+                  </font>
+                </font>
+              </p>
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="btn-group">
+                 <button style=" background:#191970;" type="button" class="btn btn-sm  ">
+                    <font style="vertical-align: inherit; "> <a href="{% url 'clinica1' %}">
+                      <font style="vertical-align: inherit; color:white;">Ver detalles</font></a>
+                    </font>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" ><h3 class="text-center">Población</h3>
+          <div class="card shadow-sm m-2">
+            <img src="{% static 'img/miguel3.JPG' %}">
+            <div class="card-body">
+              <p class="card-text">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Con relación a la población,                     
+                  </font>
+                </font>
+              </p>
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="btn-group">
+                  <button style=" background:#191970;" type="button" class="btn btn-sm  ">
+                    <font style="vertical-align: inherit; "> <a href="{% url 'clinica2' %}">
+                      <font style="vertical-align: inherit; color:white;">Ver detalles</font></a>
+                    </font>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col"><h3 class="text-center">San Miguel - Putumayo</h3>
+          <div class="card shadow-sm">
+            <img src="{% static 'img/miguel5.JPG' %}">
+            <div class="card-body">
+              <p class="card-text">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Ubicado en la llanura amazónica,</font>
+                </font>
+              </p>
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="btn-group">
+                  <button style=" background:#191970;" type="button" class="btn btn-sm  ">
+                    <font style="vertical-align: inherit; "> <a href="{% url 'clinica3' %}">
+                      <font style="vertical-align: inherit; color:white;">Ver detalles</font></a>
+                    </font>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</main>
+{% endblock contenido %}
